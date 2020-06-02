@@ -29,321 +29,13 @@
   ],
 
   "definitions": {
-    "entityType": {
-      "description": "Entity type",
-      "type": "string",
-      "enum": [
-        "businessApplication",
-        "businessTransaction",
-        "service",
-        "databaseServer",
-        "application"
-      ]
-    },
-    "hostEntityType": {
-      "description": "Entity type of the host that underlies this entity",
-      "type": "string",
-      "enum": [
-        "container",
-        "virtualMachine"
-      ]
-    },
-    "metricUnit": {
-      "description": "Units for different metrics",
-      "type": "string",
-      "enum": [
-        "count",
-        "tps",
-        "ms",
-        "mb",
-        "mhz",
-        "pct"
-      ]
-    },
-    "metricValue": {
-      "type": "object",
-      "properties": {
-        "average": {
-          "type": "number"
-        },
-        "min": {
-          "type": "number"
-        },
-        "max": {
-          "type": "number"
-        },
-        "capacity": {
-          "type": "number"
-        },
-        "unit": {
-          "$ref": "dif-entity-schema.json#/definitions/metricUnit"
-        }
-      },
-      "required": [
-        "average",
-        "unit"
-      ]
-    },
-    "metricsEntry": {
-      "description": "Supported metrics, TODO - add schemas for other supported metrics",
-      "type": "object",
-      "oneOf": [
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_responseTime"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_transaction"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_connections"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_heap"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_collectionTime"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_kpi"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_cpu"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_memory"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_threads"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_cacheHitRate"
-        },
-        {
-          "$ref": "dif-entity-schema.json#/definitions/_dbMem"
-        }
-      ]
-    },
-    "_responseTime": {
-      "description": "Specification for Response Time metrics",
-      "type": "object",
-      "properties": {
-        "responseTime": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValue"
-        }
-      },
-      "required": [
-        "responseTime"
-      ]
-    },
-    "_transaction": {
-      "description": "Specification for Transaction metrics",
-      "type": "object",
-      "properties": {
-        "transaction": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValue"
-        }
-      },
-      "required": [
-        "transaction"
-      ]
-    },
-    "_connections": {
-      "description": "Specification for Connections metrics",
-      "type": "object",
-      "properties": {
-        "connections": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValue"
-        }
-      },
-      "required": [
-        "connections"
-      ]
-    },
-    "_heap": {
-      "description": "Specification for Heap metrics",
-      "type": "object",
-      "properties": {
-        "heap": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValue"
-        }
-      },
-      "required": [
-        "heap"
-      ]
-    },
-    "_collectionTime": {
-      "description": "Specification for Collection Time metrics",
-      "type": "object",
-      "properties": {
-        "collectionTime": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValue"
-        }
-      },
-      "required": [
-        "collectionTime"
-      ]
-    },
-    "_threads": {
-      "description": "Specification for Threads metrics",
-      "type": "object",
-      "properties": {
-        "threads": {
-          "type": "array",
-          "items": {
-            "$ref": "dif-entity-schema.json#/definitions/metricValue"
-          },
-          "uniqueItems": true,
-          "minItems": 1
-        }
-      },
-      "required": [
-        "threads"
-      ]
-    },
-    "_cacheHitRate": {
-      "description": "Specification for DB Cache Hit Rate metrics",
-      "type": "object",
-      "properties": {
-        "cacheHitRate": {
-          "type": "array",
-          "items": {
-            "$ref": "dif-entity-schema.json#/definitions/metricValue"
-          },
-          "uniqueItems": true,
-          "minItems": 1
-        }
-      },
-      "required": [
-        "cacheHitRate"
-      ]
-    },
-    "_dbMem": {
-      "description": "Specification for DB Memory metrics",
-      "type": "object",
-      "properties": {
-        "dbMem": {
-          "type": "array",
-          "items": {
-            "$ref": "dif-entity-schema.json#/definitions/metricValue"
-          },
-          "uniqueItems": true,
-          "minItems": 1
-        }
-      },
-      "required": [
-        "dbMem"
-      ]
-    },
-    "_cpu": {
-      "description": "Specification for CPU metrics",
-      "type": "object",
-      "properties": {
-        "cpu": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValueWithRawData"
-        }
-      },
-      "required": [
-        "cpu"
-      ]
-    },
-    "_memory": {
-      "description": "Specification for Memory metrics",
-      "type": "object",
-      "properties": {
-        "memory": {
-          "$ref": "dif-entity-schema.json#/definitions/metricValueWithRawData"
-        }
-      },
-      "required": [
-        "memory"
-      ]
-    },
-    "_kpi": {
-      "description": "Specification for the custom metrics",
-      "type": "object",
-      "properties": {
-        "kpi": {
-          "type": "array",
-          "items": {
-            "$ref": "dif-entity-schema.json#/definitions/metricValueWithKey"
-          },
-          "uniqueItems": true,
-          "minItems": 1
-        }
-      },
-      "required": [
-        "kpi"
-      ]
-    },
-    "metricValueWithKey": {
-      "type": "object",
-      "properties": {
-        "description": {
-          "type": "string"
-        },
-        "key": {
-          "type": "string"
-        },
-        "average": {
-          "type": "number"
-        },
-        "capacity": {
-          "type": "number"
-        },
-        "unit": {
-          "$ref": "dif-entity-schema.json#/definitions/metricUnit"
-        }
-      },
-      "required": [
-        "average",
-        "unit",
-        "key"
-      ]
-    },
-    "metricValueWithRawData": {
-      "type": "object",
-      "properties": {
-        "average": {
-          "type": "number"
-        },
-        "min": {
-          "type": "number"
-        },
-        "max": {
-          "type": "number"
-        },
-        "capacity": {
-          "type": "number"
-        },
-        "unit": {
-          "$ref": "dif-entity-schema.json#/definitions/metricUnit"
-        },
-        "rawData": {
-          "type": "object",
-          "properties": {
-            "utilization": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              },
-              "minItems": 1
-            },
-            "units:": {
-              "$ref": "dif-entity-schema.json#/definitions/metricUnit"
-            }
-          },
-          "required": [
-            "utilization"
-          ]
-        }
-      },
     "entity" : {
       "description": "Format for a DIF topology entity and metrics",
       "type": "object",
       "properties": {
         "type": {
           "description": "Entity type of the entity",
-          "$ref" : "#/definitions/entityType"
+          "$ref" : "dif-entity-schema.json#/definitions/entityType"
         },
         "uniqueId": {
           "description": "Unique identifier for the entity, within the scope of the target",
@@ -370,7 +62,7 @@
             "hostType" : {
               "description": "List of entity types of the possible underlying host entity. The order in which the entity types is specified is used to find the host entity.",
               "type": "array",
-              "items": {"$ref" : "#/definitions/hostEntityType"}
+              "items": {"$ref" : "dif-entity-schema.json#/definitions/hostEntityType"}
             },
             "hostUuid": {
               "description": "Unique identifier for the host entity",
@@ -393,7 +85,7 @@
             "properties": {
               "entity": {
                 "description": "Entity type of the parent entity ",
-                "$ref": "#/definitions/entityType"
+                "$ref": "dif-entity-schema.json#/definitions/entityType"
               },
               "uniqueId": {
                 "description": "Unique identifier for the parent entity within the scope of this target",
@@ -406,7 +98,7 @@
           "description": "List of metrics and values for the entity",
           "type" : "array",
           "items": {
-            "$ref": "#/definitions/metricsEntry"
+            "$ref": "dif-entity-schema.json#/definitions/metricsEntry"
           },
           "minItems" : 1
         }
