@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "topology": {
-      "description": 'List of topology entities Arf',
+      "description": 'List of topology entities WOOF <a href="www.cudspan.net">CLICK ME</a>',
       "type" : "array",
       "items": {
         "$ref": "#/definitions/entity"
