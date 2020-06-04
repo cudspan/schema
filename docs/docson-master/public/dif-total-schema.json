@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "topology": {
-      "description": "List of topology entities. Arf",
+      "description": "List of topology entities Arf",
       "type" : "array",
       "items": {
         "$ref": "#/definitions/entity"
