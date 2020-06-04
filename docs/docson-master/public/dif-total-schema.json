@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "topology": {
-      "description": "List of topology entities WOOF <br><h1>LINK BELOW</h1><br><p>This is more text! <a href='http://www.cudspan.net'>CLICK ME</a></p>",
+      "description": "List of topology entities WOOF <h1>LINK BELOW</h1><p>This is more text! <a href='http://www.cudspan.net'>CLICK ME</a></p>",
       "type" : "array",
       "items": {
         "$ref": "#/definitions/entity"
