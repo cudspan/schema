@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "topology": {
-      "description": "List of topology entities WOOF <h1>CLICK ME</h1>",
+      "description": "List of topology entities WOOF <br><h1>CLICK ME</h1><br>This is more text!",
       "type" : "array",
       "items": {
         "$ref": "#/definitions/entity"
