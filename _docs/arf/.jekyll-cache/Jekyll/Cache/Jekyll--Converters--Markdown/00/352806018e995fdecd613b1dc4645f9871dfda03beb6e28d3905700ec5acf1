@@ -1,0 +1,34 @@
+I"‹<pre><code class="language-txt">http://turbonomic.com/dif-topology.json#/definitions
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Abstract</th>
+      <th>Extensible</th>
+      <th>Status</th>
+      <th>Identifiable</th>
+      <th style="text-align: left">Custom Properties</th>
+      <th>Additional Properties</th>
+      <th>Access Restrictions</th>
+      <th>Defined In</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Can be instantiated</td>
+      <td>No</td>
+      <td>Unknown status</td>
+      <td>Unknown identifiability</td>
+      <td style="text-align: left">Forbidden</td>
+      <td>Allowed</td>
+      <td>none</td>
+      <td><a href="../out/dif-total-schema.schema.json" title="open original schema">dif-total-schema.schema.json*</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="definitions-type">definitions Type</h2>
+
+<p>unknown</p>
+:ET

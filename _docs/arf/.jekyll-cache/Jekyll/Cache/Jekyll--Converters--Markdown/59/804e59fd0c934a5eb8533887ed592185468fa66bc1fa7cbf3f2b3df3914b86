@@ -1,0 +1,1431 @@
+I"��<pre><code class="language-txt">http://turbonomic.com/dif-topology.json
+</code></pre>
+
+<p>Format for a DIF topology ARF YOU DOG</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Abstract</th>
+      <th>Extensible</th>
+      <th>Status</th>
+      <th>Identifiable</th>
+      <th style="text-align: left">Custom Properties</th>
+      <th>Additional Properties</th>
+      <th>Access Restrictions</th>
+      <th>Defined In</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Can be instantiated</td>
+      <td>Yes</td>
+      <td>Unknown status</td>
+      <td>No</td>
+      <td style="text-align: left">Forbidden</td>
+      <td>Allowed</td>
+      <td>none</td>
+      <td><a href="../out/dif-total-schema.schema.json" title="open original schema">dif-total-schema.schema.json</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dif-topology-file-type">DIF Topology File Type</h2>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema.md">DIF Topology File</a>)</p>
+
+<h1 id="dif-topology-file-properties">DIF Topology File Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#version">version</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-properties-version.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/version">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#updateTime">updateTime</a></td>
+      <td><code class="language-plaintext highlighter-rouge">integer</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-properties-updatetime.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/updateTime">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#topology">topology</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-properties-topology.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/topology">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="version">version</h2>
+
+<p><code class="language-plaintext highlighter-rouge">version</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-properties-version.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/version">DIF Topology File</a></li>
+</ul>
+
+<h3 id="version-type">version Type</h3>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h2 id="updatetime">updateTime</h2>
+
+<p>Epoch timestamp for when files are generated</p>
+
+<p><code class="language-plaintext highlighter-rouge">updateTime</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">integer</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-properties-updatetime.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/updateTime">DIF Topology File</a></li>
+</ul>
+
+<h3 id="updatetime-type">updateTime Type</h3>
+
+<p><code class="language-plaintext highlighter-rouge">integer</code></p>
+
+<h2 id="topology">topology</h2>
+
+<p>List of topology entities WOOF &lt;h1&gt;LINK BELOW&lt;/h1&gt;&lt;p&gt;This is more text! <a href="http://www.cudspan.net">CLICK ME</a>&lt;/p&gt;</p>
+
+<p><code class="language-plaintext highlighter-rouge">topology</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-entity.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-properties-topology.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/properties/topology">DIF Topology File</a></li>
+</ul>
+
+<h3 id="topology-type">topology Type</h3>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-entity.md">Details</a>)</p>
+
+<h3 id="topology-constraints">topology Constraints</h3>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<h1 id="dif-topology-file-definitions">DIF Topology File Definitions</h1>
+
+<h2 id="definitions-group-entitytype">Definitions group entityType</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/entityType"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>| Property | Type | Required | Nullable | Defined by |
+| :——- | —- | ——– | ——– | :——— |</p>
+
+<h2 id="definitions-group-hostentitytype">Definitions group hostEntityType</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/hostEntityType"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>| Property | Type | Required | Nullable | Defined by |
+| :——- | —- | ——– | ——– | :——— |</p>
+
+<h2 id="definitions-group-metricunit">Definitions group metricUnit</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/metricUnit"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>| Property | Type | Required | Nullable | Defined by |
+| :——- | —- | ——– | ——– | :——— |</p>
+
+<h2 id="definitions-group-metricvalue">Definitions group metricValue</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/metricValue"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#average">average</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/average">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#min">min</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue-properties-min.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/min">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#max">max</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue-properties-max.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/max">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#capacity">capacity</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/capacity">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#unit">unit</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/unit">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="average">average</h3>
+
+<p><code class="language-plaintext highlighter-rouge">average</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/average">DIF Topology File</a></li>
+</ul>
+
+<h4 id="average-type">average Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="min">min</h3>
+
+<p><code class="language-plaintext highlighter-rouge">min</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue-properties-min.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/min">DIF Topology File</a></li>
+</ul>
+
+<h4 id="min-type">min Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="max">max</h3>
+
+<p><code class="language-plaintext highlighter-rouge">max</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue-properties-max.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/max">DIF Topology File</a></li>
+</ul>
+
+<h4 id="max-type">max Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="capacity">capacity</h3>
+
+<p><code class="language-plaintext highlighter-rouge">capacity</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/capacity">DIF Topology File</a></li>
+</ul>
+
+<h4 id="capacity-type">capacity Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="unit">unit</h3>
+
+<p>Units for different metrics</p>
+
+<p><code class="language-plaintext highlighter-rouge">unit</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValue/properties/unit">DIF Topology File</a></li>
+</ul>
+
+<h4 id="unit-type">unit Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h4 id="unit-constraints">unit Constraints</h4>
+
+<p><strong>enum</strong>: the value of this property must be equal to one of the following values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"count"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"tps"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"ms"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mb"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mhz"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"pct"</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="definitions-group-metricsentry">Definitions group metricsEntry</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/metricsEntry"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>| Property | Type | Required | Nullable | Defined by |
+| :——- | —- | ——– | ——– | :——— |</p>
+
+<h2 id="definitions-group-_responsetime">Definitions group _responseTime</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_responseTime"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#responseTime">responseTime</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_responseTime/properties/responseTime">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="responsetime">responseTime</h3>
+
+<p><code class="language-plaintext highlighter-rouge">responseTime</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_responseTime/properties/responseTime">DIF Topology File</a></li>
+</ul>
+
+<h4 id="responsetime-type">responseTime Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h2 id="definitions-group-_transaction">Definitions group _transaction</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_transaction"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#transaction">transaction</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_transaction/properties/transaction">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="transaction">transaction</h3>
+
+<p><code class="language-plaintext highlighter-rouge">transaction</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_transaction/properties/transaction">DIF Topology File</a></li>
+</ul>
+
+<h4 id="transaction-type">transaction Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h2 id="definitions-group-_connections">Definitions group _connections</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_connections"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#connections">connections</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_connections/properties/connections">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="connections">connections</h3>
+
+<p><code class="language-plaintext highlighter-rouge">connections</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_connections/properties/connections">DIF Topology File</a></li>
+</ul>
+
+<h4 id="connections-type">connections Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h2 id="definitions-group-_heap">Definitions group _heap</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_heap"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#heap">heap</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_heap/properties/heap">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="heap">heap</h3>
+
+<p><code class="language-plaintext highlighter-rouge">heap</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_heap/properties/heap">DIF Topology File</a></li>
+</ul>
+
+<h4 id="heap-type">heap Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h2 id="definitions-group-_collectiontime">Definitions group _collectionTime</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_collectionTime"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#collectionTime">collectionTime</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_collectionTime/properties/collectionTime">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="collectiontime">collectionTime</h3>
+
+<p><code class="language-plaintext highlighter-rouge">collectionTime</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvalue.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_collectionTime/properties/collectionTime">DIF Topology File</a></li>
+</ul>
+
+<h4 id="collectiontime-type">collectionTime Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h2 id="definitions-group-_threads">Definitions group _threads</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_threads"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#threads">threads</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-_threads-properties-threads.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_threads/properties/threads">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="threads">threads</h3>
+
+<p><code class="language-plaintext highlighter-rouge">threads</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-_threads-properties-threads.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_threads/properties/threads">DIF Topology File</a></li>
+</ul>
+
+<h4 id="threads-type">threads Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h4 id="threads-constraints">threads Constraints</h4>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<p><strong>unique items</strong>: all items in this array must be unique. Duplicates are not allowed.</p>
+
+<h2 id="definitions-group-_cachehitrate">Definitions group _cacheHitRate</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_cacheHitRate"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#cacheHitRate">cacheHitRate</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-_cachehitrate-properties-cachehitrate.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_cacheHitRate/properties/cacheHitRate">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cachehitrate">cacheHitRate</h3>
+
+<p><code class="language-plaintext highlighter-rouge">cacheHitRate</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-_cachehitrate-properties-cachehitrate.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_cacheHitRate/properties/cacheHitRate">DIF Topology File</a></li>
+</ul>
+
+<h4 id="cachehitrate-type">cacheHitRate Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h4 id="cachehitrate-constraints">cacheHitRate Constraints</h4>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<p><strong>unique items</strong>: all items in this array must be unique. Duplicates are not allowed.</p>
+
+<h2 id="definitions-group-_dbmem">Definitions group _dbMem</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_dbMem"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#dbMem">dbMem</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-_dbmem-properties-dbmem.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_dbMem/properties/dbMem">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dbmem">dbMem</h3>
+
+<p><code class="language-plaintext highlighter-rouge">dbMem</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-_dbmem-properties-dbmem.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_dbMem/properties/dbMem">DIF Topology File</a></li>
+</ul>
+
+<h4 id="dbmem-type">dbMem Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvalue.md">Details</a>)</p>
+
+<h4 id="dbmem-constraints">dbMem Constraints</h4>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<p><strong>unique items</strong>: all items in this array must be unique. Duplicates are not allowed.</p>
+
+<h2 id="definitions-group-_cpu">Definitions group _cpu</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_cpu"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#cpu">cpu</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_cpu/properties/cpu">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cpu">cpu</h3>
+
+<p><code class="language-plaintext highlighter-rouge">cpu</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_cpu/properties/cpu">DIF Topology File</a></li>
+</ul>
+
+<h4 id="cpu-type">cpu Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata.md">Details</a>)</p>
+
+<h2 id="definitions-group-_memory">Definitions group _memory</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_memory"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#memory">memory</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_memory/properties/memory">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="memory">memory</h3>
+
+<p><code class="language-plaintext highlighter-rouge">memory</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_memory/properties/memory">DIF Topology File</a></li>
+</ul>
+
+<h4 id="memory-type">memory Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata.md">Details</a>)</p>
+
+<h2 id="definitions-group-_kpi">Definitions group _kpi</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/_kpi"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#kpi">kpi</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-_kpi-properties-kpi.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_kpi/properties/kpi">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="kpi">kpi</h3>
+
+<p><code class="language-plaintext highlighter-rouge">kpi</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvaluewithkey.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-_kpi-properties-kpi.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/\_kpi/properties/kpi">DIF Topology File</a></li>
+</ul>
+
+<h4 id="kpi-type">kpi Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricvaluewithkey.md">Details</a>)</p>
+
+<h4 id="kpi-constraints">kpi Constraints</h4>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+
+<p><strong>unique items</strong>: all items in this array must be unique. Duplicates are not allowed.</p>
+
+<h2 id="definitions-group-metricvaluewithkey">Definitions group metricValueWithKey</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/metricValueWithKey"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#description">description</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithkey-properties-description.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/description">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#key">key</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithkey-properties-key.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/key">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#average">average</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithkey-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/average">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#capacity">capacity</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithkey-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/capacity">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#unit">unit</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithkey-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/unit">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="description">description</h3>
+
+<p><code class="language-plaintext highlighter-rouge">description</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithkey-properties-description.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/description">DIF Topology File</a></li>
+</ul>
+
+<h4 id="description-type">description Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h3 id="key">key</h3>
+
+<p><code class="language-plaintext highlighter-rouge">key</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithkey-properties-key.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/key">DIF Topology File</a></li>
+</ul>
+
+<h4 id="key-type">key Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h3 id="average-1">average</h3>
+
+<p><code class="language-plaintext highlighter-rouge">average</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithkey-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/average">DIF Topology File</a></li>
+</ul>
+
+<h4 id="average-type-1">average Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="capacity-1">capacity</h3>
+
+<p><code class="language-plaintext highlighter-rouge">capacity</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithkey-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/capacity">DIF Topology File</a></li>
+</ul>
+
+<h4 id="capacity-type-1">capacity Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="unit-1">unit</h3>
+
+<p>Units for different metrics</p>
+
+<p><code class="language-plaintext highlighter-rouge">unit</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithkey-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithKey/properties/unit">DIF Topology File</a></li>
+</ul>
+
+<h4 id="unit-type-1">unit Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h4 id="unit-constraints-1">unit Constraints</h4>
+
+<p><strong>enum</strong>: the value of this property must be equal to one of the following values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"count"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"tps"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"ms"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mb"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mhz"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"pct"</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="definitions-group-metricvaluewithrawdata">Definitions group metricValueWithRawData</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#average">average</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/average">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#min">min</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-min.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/min">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#max">max</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-max.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/max">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#capacity">capacity</a></td>
+      <td><code class="language-plaintext highlighter-rouge">number</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/capacity">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#unit">unit</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/unit">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#rawData">rawData</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-rawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/rawData">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="average-2">average</h3>
+
+<p><code class="language-plaintext highlighter-rouge">average</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-average.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/average">DIF Topology File</a></li>
+</ul>
+
+<h4 id="average-type-2">average Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="min-1">min</h3>
+
+<p><code class="language-plaintext highlighter-rouge">min</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-min.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/min">DIF Topology File</a></li>
+</ul>
+
+<h4 id="min-type-1">min Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="max-1">max</h3>
+
+<p><code class="language-plaintext highlighter-rouge">max</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-max.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/max">DIF Topology File</a></li>
+</ul>
+
+<h4 id="max-type-1">max Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="capacity-2">capacity</h3>
+
+<p><code class="language-plaintext highlighter-rouge">capacity</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">number</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-capacity.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/capacity">DIF Topology File</a></li>
+</ul>
+
+<h4 id="capacity-type-2">capacity Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">number</code></p>
+
+<h3 id="unit-2">unit</h3>
+
+<p>Units for different metrics</p>
+
+<p><code class="language-plaintext highlighter-rouge">unit</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-unit.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/unit">DIF Topology File</a></li>
+</ul>
+
+<h4 id="unit-type-2">unit Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h4 id="unit-constraints-2">unit Constraints</h4>
+
+<p><strong>enum</strong>: the value of this property must be equal to one of the following values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"count"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"tps"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"ms"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mb"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"mhz"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"pct"</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rawdata">rawData</h3>
+
+<p><code class="language-plaintext highlighter-rouge">rawData</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-rawdata.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-rawdata.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/metricValueWithRawData/properties/rawData">DIF Topology File</a></li>
+</ul>
+
+<h4 id="rawdata-type">rawData Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-metricvaluewithrawdata-properties-rawdata.md">Details</a>)</p>
+
+<h2 id="definitions-group-entity">Definitions group entity</h2>
+
+<p>Reference this group by using</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"$ref"</span><span class="p">:</span><span class="s2">"http://turbonomic.com/dif-topology.json#/definitions/entity"</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Property</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Nullable</th>
+      <th style="text-align: left">Defined by</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="#type">type</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-type.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/type">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#uniqueId">uniqueId</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-uniqueid.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/uniqueId">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#name">name</a></td>
+      <td><code class="language-plaintext highlighter-rouge">string</code></td>
+      <td>Required</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-name.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/name">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#matchIdentifiers">matchIdentifiers</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-matchidentifiers.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/matchIdentifiers">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#hostedOn">hostedOn</a></td>
+      <td><code class="language-plaintext highlighter-rouge">object</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-hostedon.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/hostedOn">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#partOf">partOf</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-partof.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/partOf">DIF Topology File</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="#metrics">metrics</a></td>
+      <td><code class="language-plaintext highlighter-rouge">array</code></td>
+      <td>Optional</td>
+      <td>cannot be null</td>
+      <td style="text-align: left"><a href="dif-total-schema-definitions-entity-properties-metrics.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/metrics">DIF Topology File</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="type">type</h3>
+
+<p>Entity type</p>
+
+<p><code class="language-plaintext highlighter-rouge">type</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-type.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/type">DIF Topology File</a></li>
+</ul>
+
+<h4 id="type-type">type Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h4 id="type-constraints">type Constraints</h4>
+
+<p><strong>enum</strong>: the value of this property must be equal to one of the following values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th>Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"businessApplication"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"businessTransaction"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"service"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"databaseServer"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"application"</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="uniqueid">uniqueId</h3>
+
+<p>Unique identifier for the entity, within the scope of the target</p>
+
+<p><code class="language-plaintext highlighter-rouge">uniqueId</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-uniqueid.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/uniqueId">DIF Topology File</a></li>
+</ul>
+
+<h4 id="uniqueid-type">uniqueId Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h3 id="name">name</h3>
+
+<p>Entity name</p>
+
+<p><code class="language-plaintext highlighter-rouge">name</code></p>
+
+<ul>
+  <li>is required</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">string</code></li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-name.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/name">DIF Topology File</a></li>
+</ul>
+
+<h4 id="name-type">name Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">string</code></p>
+
+<h3 id="matchidentifiers">matchIdentifiers</h3>
+
+<p>Attributes used to find the entity that matches this entity</p>
+
+<p><code class="language-plaintext highlighter-rouge">matchIdentifiers</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-entity-properties-matchidentifiers.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-matchidentifiers.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/matchIdentifiers">DIF Topology File</a></li>
+</ul>
+
+<h4 id="matchidentifiers-type">matchIdentifiers Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-entity-properties-matchidentifiers.md">Details</a>)</p>
+
+<h3 id="hostedon">hostedOn</h3>
+
+<p>Attributes used to find the entity that hosts this entity</p>
+
+<p><code class="language-plaintext highlighter-rouge">hostedOn</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-entity-properties-hostedon.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-hostedon.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/hostedOn">DIF Topology File</a></li>
+</ul>
+
+<h4 id="hostedon-type">hostedOn Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object</code> (<a href="dif-total-schema-definitions-entity-properties-hostedon.md">Details</a>)</p>
+
+<h3 id="partof">partOf</h3>
+
+<p>Attributes used to find all the entities that this entity is part of</p>
+
+<p><code class="language-plaintext highlighter-rouge">partOf</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-entity-properties-partof-items.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-partof.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/partOf">DIF Topology File</a></li>
+</ul>
+
+<h4 id="partof-type">partOf Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-entity-properties-partof-items.md">Details</a>)</p>
+
+<h3 id="metrics">metrics</h3>
+
+<p>List of metrics and values for the entity</p>
+
+<p><code class="language-plaintext highlighter-rouge">metrics</code></p>
+
+<ul>
+  <li>is optional</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricsentry.md">Details</a>)</li>
+  <li>cannot be null</li>
+  <li>defined in: <a href="dif-total-schema-definitions-entity-properties-metrics.md" title="http&#x3A;//turbonomic.com/dif-topology.json#/definitions/entity/properties/metrics">DIF Topology File</a></li>
+</ul>
+
+<h4 id="metrics-type">metrics Type</h4>
+
+<p><code class="language-plaintext highlighter-rouge">object[]</code> (<a href="dif-total-schema-definitions-metricsentry.md">Details</a>)</p>
+
+<h4 id="metrics-constraints">metrics Constraints</h4>
+
+<p><strong>minimum number of items</strong>: the minimum number of items for this array is: <code class="language-plaintext highlighter-rouge">1</code></p>
+:ET
