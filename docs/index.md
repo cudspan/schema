@@ -6,3 +6,8 @@ layout: home
 ---
 
 ## ARF YOU DOG
+
+<p><a href="http://www.cudspan.net">ARF PAGE</a></p>
+<p><a href="docson-master/public/index.html#./dif-total-schema.json">WOOF DOCSON</a></p>
+
+[My page](/path/to/page.html)
