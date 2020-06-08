@@ -14,7 +14,7 @@
       "type": "integer"
     },
     "topology": {
-      "description": "List of topology entities WOOF <h1>LINK BELOW</h1><p>This is more text! <a href='http://www.cudspan.net'>CLICK ME</a></p>",
+      "description": "A topology is an array of ENTITY objects <p><a href='../../pages/Topology.html'>More Info</a></p>",
       "type" : "array",
       "items": {
         "$ref": "#/definitions/entity"
