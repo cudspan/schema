@@ -4,63 +4,25 @@
   <!-- Page title set in pageTitle directive -->
   <title page-title>{{ site.title }}</title>
   
-  <link href="../css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
+  <link href="../../css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
+  <!--
   <link href="../css/FourD_CSS/ui.fancytree.css" rel="stylesheet" type="text/css"/>
-  
+  -->
 
   <body>
     
     <div id="angularThing" ng-controller="TopicCtrl as mainCtrl">
       <nav class='banner'>
         <div class="bannerbar" >
-          <img src="../assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
+          <img src="../../assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
           <div class="titleHead">
             <h4 class="revision"><font color="white">{{ site.title }}</span></font></h4>
           </div>
         </div>
       </nav>
       
-      <!-- ========= Topic Content... =========== -->
-      <section id="center">
-        
-        <div id="topicDiv">
-          <article id ='topicArt' class="topic">
-            <h1>{{ page.title }}</h1>
-            {{ content }}
-          </article>
-        </div>
-      </section>
+      {% include default_core.html %}
       
-      <div id="navList">
-        <ul id="menu">
-          <li class="tabbed" id="nav-1"><span  ng-click="mainCtrl.showDiv('toc')" class="Click">TOC</span></li>
-          <li class="tabbed" id="nav-2"><span  ng-click="mainCtrl.showDiv('search')" class="Click">Search</span></li>
-        </ul>
-        <span>
-          <div id="toc">
-            <p><span class="click" ng-click="mainCtrl.expandToc()">open all</span> |
-              <span class="click" ng-click="mainCtrl.collapseToc()">close all</span></p>
-            <article class="navList">
-              <div id="tocresult" tabIdex="-1" ></div>
-            </article>
-          </div>
-          
-          <div id="search">
-            <search-directive id="searchDiv" class="navContent" searchobj="searchobj"/>
-          </div>
-        </span>
-      </div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
   </body>
 
 </html>
