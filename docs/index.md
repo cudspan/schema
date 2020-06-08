@@ -1,13 +1,20 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Turbonomic Data Ingestion Framework
 ---
 
-## ARF YOU DOG
+Welcome to the Turbonomic Data Ingestion Framework (DIF). This framework 
+enables you to declare custom entities and entity metrics for you environment, 
+and load them 
+into the Turbonomic Market for analysis. 
+
+The DIF consists of:
+* A JSON schema that declares the structure of the data you will load into the Turbonomic Market
+* A probe component running on the Turbonomic platform that periodically requests your data to ingest any updates
+
+
 
 <p><a href="http://www.cudspan.net">ARF PAGE</a></p>
 <p><a href="docson-master/public/index.html#./dif-total-schema.json">WOOF DOCSON</a></p>
 
-[My page](/path/to/page.html)
+[My page](pages/Entity.html)
