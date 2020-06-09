@@ -28,12 +28,14 @@
           <p>ARF</p>
           <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
           
+          <ul>
           {% for repository in site.github.public_repositories %}
-               * [{{ repository.name }}]({{ repository.html_url }})
+            <li>{{ repository.name }} :: {{ repository.html_url }}</li>
           {% endfor %}
+          </ul>
 
           
-          REPOS URL IS: {{ site.github.repository_url }}
+          <p>REPOS URL IS: {{ site.github.repository_url }}</p>
           
           <p>WOOF</p>
           
