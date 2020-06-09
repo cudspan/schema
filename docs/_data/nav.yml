@@ -7,6 +7,6 @@ toc:
   - title: Schema Object Descriptions
     subItems:
     - page: Topology Object
-      url: pages/Topology.html
+      url: Topology.html
     - page: Entity Object
-      url: pages/Entity.html
+      url: Entity.html
