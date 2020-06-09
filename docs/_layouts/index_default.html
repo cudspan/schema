@@ -26,7 +26,7 @@
         <article id ='topicArt' class="topic">
           <h1>{{ page.title }}</h1>
           <p>ARF</p>
-          <p>site.baseurl is: {{ site.baseurl }}</p>
+          <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
           
           {% for repository in site.github.public_repositories %}
                * [{{ repository.name }}]({{ repository.html_url }})
