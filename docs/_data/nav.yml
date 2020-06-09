@@ -3,10 +3,13 @@ toc:
     subItems:
     - page: DIF JSON Schema
       url: docson-master/public/index.html#./dif-total-schema.json
+      dir: ./
   
   - title: Schema Object Descriptions
     subItems:
     - page: Topology Object
       url: Topology.html
+      dir: page/
     - page: Entity Object
       url: Entity.html
+      dir: page/
