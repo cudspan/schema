@@ -18,4 +18,4 @@ The DIF consists of:
 <p><a href="http://www.cudspan.net">ARF PAGE</a></p>
 <p><a href="docson-master/public/index.html#./dif-total-schema.json">WOOF DOCSON</a></p>
 -->
-[Entities Page](pages/Entity.html)
+[Entities Page](page/Entity.html)
