@@ -27,6 +27,14 @@
           <h1>{{ page.title }}</h1>
           <p>ARF</p>
           <p>site.baseurl is: {{ site.baseurl }}</p>
+          
+          {% for repository in site.github.public_repositories %}
+               * [{{ repository.name }}]({{ repository.html_url }})
+          {% endfor %}
+
+          
+          REPOS URL IS: {{ site.github.repository_url }}
+          
           <p>WOOF</p>
           
           {{ content }}
