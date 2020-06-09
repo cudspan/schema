@@ -2,11 +2,11 @@ toc:
   - title: DIF Schema Specification
     subItems:
     - page: DIF JSON Schema
-      url: schema/docson-master/public/index.html#./dif-total-schema.json
+      url: docson-master/public/index.html#./dif-total-schema.json
   
   - title: Schema Object Descriptions
     subItems:
     - page: Topology Object
-      url: schema/pages/Topology.html
+      url: pages/Topology.html
     - page: Entity Object
-      url: schema/pages/Entity.html
+      url: pages/Entity.html
