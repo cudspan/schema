@@ -4,8 +4,15 @@
   <!-- Page title set in pageTitle directive -->
   <title page-title>{{ site.title }}</title>
   
-  <link href="{{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
+  {% if site.github.pages_hostname == "github.io" %}
+      <link href="{{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
+  {% else page.platform == "windows" %}
+      <link href="./css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
+  {% endif %}
+  
+  
   <!--
+  <link href="{{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
   <link href="./css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
   <link href="./css/FourD_CSS/ui.fancytree.css" rel="stylesheet" type="text/css"/>
   -->
@@ -15,9 +22,17 @@
     <div id="angularThing" ng-controller="TopicCtrl as mainCtrl">
       <nav class='banner'>
         <div class="bannerbar" >
+          
+          {% if site.github.pages_hostname == "github.io" %}
           <img src="{{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" 
             style="width: 80%; max-width: 100px;"/>
+          {% else page.platform == "windows" %}
+          <img src="./assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
+          {% endif %}
           <!--
+          <img src="{{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" 
+            style="width: 80%; max-width: 100px;"/>
+            
           <img src="./assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
           -->
           <div class="titleHead">
@@ -42,6 +57,8 @@
           
           <p>REPOS URL IS: {{ site.github.repository_url }}</p>
           
+          <p>TSTING SITE GITHUB:</p>
+          <p>site.github.pages_hostname is: {{ site.github.pages_hostname }}</p>
           <p>site.url is: {{ site.url }}</p>
           <p>WOOF</p>
           
