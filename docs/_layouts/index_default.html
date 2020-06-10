@@ -66,11 +66,11 @@
                   <ul>
                     {% for entry in item.subItems %}
                     
-                    <li><a href="{{ entry.url | relative_url }}">{{ entry.url  | relative_url }} | relative</a></li>
-                    <li><a href="{{ entry.dir | relative_url }}">{{ entry.dir  | relative_url }} | relative</a></li>
-                    <li><a href="{{ entry.url | relative_url }}">{{ entry.url  | absolute_url }} | absolute</a></li>
-                    <li><a href="{{ entry.dir | relative_url }}">{{ entry.dir  | absolute_url }} | absolute</a></li>
-                    <li><a href="{{ entry.dir }}{{ entry.url | relative_url }}">{{ entry.dir }}{{ entry.url  | relative_url }} | relative</a></li>
+                    <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ entry.url  | relative_url }} | relative</a></li>
+                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ entry.dir  | relative_url }} | relative</a></li>
+                    <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ entry.url  | absolute_url }} | absolute</a></li>
+                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ entry.dir  | absolute_url }} | absolute</a></li>
+                    <li><a href="{{ site.github.baseurl }}{{ entry.dir }}{{ entry.url | relative_url }}">{{ entry.dir }}{{ entry.url  | relative_url }} | relative</a></li>
                     <li><a href="/{{ entry.url }}">{{ entry.dir }}{{ entry.url }}</a></li>
                     
                     
