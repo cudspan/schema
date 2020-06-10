@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://turbonomic.com/dif-topology.json",
   "title": "DIF Topology File",
-  "description": "Format for a DIF topology. A topology is an array of ENTITY objects <p><a href='../../pages/Topology.html'>More Info</a></p>",
+  "description": "Format for a DIF topology. A topology is an array of ENTITY objects <p><a href='../../page/Topology.html'>More Info</a></p>",
   "type": "object",
   "properties": {
     "version": {
