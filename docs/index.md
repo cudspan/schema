@@ -1,12 +1,10 @@
 ---
-layout: index_default
+layout: default
 title: Turbonomic Data Ingestion Framework
 ---
 
-ARF YOU DOG!!!
-
 Welcome to the Turbonomic Data Ingestion Framework (DIF). This framework 
-enables you to declare custom entities and entity metrics for you environment, 
+enables you to declare custom entities and entity metrics for your environment, 
 and load them 
 into the Turbonomic Market for analysis. 
 

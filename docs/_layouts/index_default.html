@@ -45,16 +45,15 @@
       <div id="topicDiv">
         <article id ='topicArt' class="topic">
           <h1>{{ page.title }}</h1>
-          <p>ARF</p>
-          <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
           
+          <div style="font-size: 10px;">
+          <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
           
           {% if site.github.pages_hostname == "github.io" %}
           <p>CSS LINK IS: {{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}</p>
           {% else %}
           <p>CSS LINK IS: {{ 'css/FourD_CSS/vmtHelp.css' | absolute_url }}</p>
           {% endif %}
-          
           
           {% if site.github.pages_hostname == "github.io" %}
           <p>LOGO LINK IS: {{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}</p>
@@ -69,21 +68,8 @@
           <p>DOC HOME LINK: {{ 'index.html' | absolute_url }}</p>
           {% endif %}
           
-          
-          <!--
-          <ul>
-          {% for repository in site.github.public_repositories %}
-            <li>{{ repository.name }} :: {{ repository.html_url }}</li>
-          {% endfor %}
-          </ul>
--->
-          
           <p>REPOS URL IS: {{ site.github.repository_url }}</p>
-          
-          <p>TESTING SITE GITHUB:</p>
-          <p>site.github.pages_hostname is: {{ site.github.pages_hostname }}</p>
-          <p>site.url is: {{ site.url }}</p>
-          <p>WOOF</p>
+          </div>
           
           {{ content }}
           

@@ -10,6 +10,6 @@ toc:
     - page: Topology Object
       url: Topology.html
       dir: page/Topology.html
-    - page: /Entity Object
+    - page: Entity Object
       url: Entity.html
       dir: /page/Entity.html

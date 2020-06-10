@@ -1,5 +1,5 @@
 ---
-layout: index_default
+layout: default
 title: Topology Object
 ---
 
