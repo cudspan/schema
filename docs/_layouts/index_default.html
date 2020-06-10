@@ -6,8 +6,8 @@
   
   {% if site.github.pages_hostname == "github.io" %}
       <link href="{{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
-  {% else page.platform == "windows" %}
-      <link href="./css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
+  {% else %}
+      <link href="{{ 'css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
   {% endif %}
   
   
@@ -26,8 +26,8 @@
           {% if site.github.pages_hostname == "github.io" %}
           <img src="{{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" 
             style="width: 80%; max-width: 100px;"/>
-          {% else page.platform == "windows" %}
-          <img src="./assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
+          {% else %}
+          <img src="{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" style="width: 80%; max-width: 100px;"/>
           {% endif %}
           <!--
           <img src="{{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" 
@@ -48,16 +48,39 @@
           <p>ARF</p>
           <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
           
+          
+          {% if site.github.pages_hostname == "github.io" %}
+          <p>CSS LINK IS: {{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}</p>
+          {% else %}
+          <p>CSS LINK IS: {{ 'css/FourD_CSS/vmtHelp.css' | absolute_url }}</p>
+          {% endif %}
+          
+          
+          {% if site.github.pages_hostname == "github.io" %}
+          <p>LOGO LINK IS: {{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}</p>
+          {% else %}
+          <p>LOGO LINK IS: {{ 'assets/logos/logoInv.png' | relative_url }}</p>
+          {% endif %}
+          
+          
+          {% if site.github.pages_hostname == "github.io" %}
+          <p>DOC HOME LINK: {{ site.github.baseurl }}{{ 'index.html' | relative_url }}</p>
+          {% else %}
+          <p>DOC HOME LINK: {{ 'index.html' | absolute_url }}</p>
+          {% endif %}
+          
+          
+          <!--
           <ul>
           {% for repository in site.github.public_repositories %}
             <li>{{ repository.name }} :: {{ repository.html_url }}</li>
           {% endfor %}
           </ul>
-
+-->
           
           <p>REPOS URL IS: {{ site.github.repository_url }}</p>
           
-          <p>TSTING SITE GITHUB:</p>
+          <p>TESTING SITE GITHUB:</p>
           <p>site.github.pages_hostname is: {{ site.github.pages_hostname }}</p>
           <p>site.url is: {{ site.url }}</p>
           <p>WOOF</p>
@@ -77,15 +100,33 @@
             <article class="navList">
               <div id="tocresult" tabIdex="-1" >
                 <ul>
+                  
+                  {% if site.github.pages_hostname == "github.io" %}
+                  <h5><a href="{{ site.github.baseurl }}{{ 'index.html' | relative_url }}">DOCUMENTATION HOME</a></h5>
+                  {% else %}
+                  <h5><a href="{{ 'index.html' | absolute_url }}">DOCUMENTATION HOME</a></h5>
+                  {% endif %}
+                  <!--
                   <h5><a href="index.html">HOME PAGE</a></h5>
+                  -->
                   {% for item in site.data.nav.toc %}
                   <h5>{{ item.title }}</h5>
                   <ul>
                     {% for entry in item.subItems %}
+                    
+                    
+                    {% if site.github.pages_hostname == "github.io" %}
+                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ site.github.baseurl }}{{ entry.dir  | relative_url }} | relative</a></li>
+                    {% else %}
+                    <li><a href="{{ entry.dir | absolute_url }}">{{ entry.dir  | relative_url }} | relative</a></li>
+                    {% endif %}
+                    
+                    
                     <!--
                     <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ site.github.baseurl }}{{ entry.url  | relative_url }} | relative</a></li>
-                    -->
+                    
                     <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ site.github.baseurl }}{{ entry.dir  | relative_url }} | relative</a></li>
+                    -->
                     <!--
                     <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ site.github.baseurl }}{{ entry.url  | absolute_url }} | absolute</a></li>
                     <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ site.github.baseurl }}{{ entry.dir  | absolute_url }} | absolute</a></li>
