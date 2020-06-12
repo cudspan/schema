@@ -10,13 +10,6 @@
   <link href="{{ 'css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
   {% endif %}
   
-  
-  <!--
-  <link href="{{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}" rel="stylesheet" type="text/css"/>
-  <link href="./css/FourD_CSS/vmtHelp.css" rel="stylesheet" type="text/css"/>
-  <link href="./css/FourD_CSS/ui.fancytree.css" rel="stylesheet" type="text/css"/>
-  -->
-  
   <body>
     
     <div id="angularThing" ng-controller="TopicCtrl as mainCtrl">
@@ -29,12 +22,6 @@
           {% else %}
           <img src="{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" style="width: 80%; max-width: 100px;"/>
           {% endif %}
-          <!--
-          <img src="{{ site.github.baseurl }}{{ 'assets/logos/logoInv.png' | relative_url }}" id="logo_image" 
-            style="width: 80%; max-width: 100px;"/>
-            
-          <img src="./assets/logos/logoInv.png" id="logo_image" style="width: 80%; max-width: 100px;"/>
-          -->
           <div class="titleHead">
             <h4 class="revision"><font color="white">{{ site.title }}</span></font></h4>
           </div>
@@ -45,9 +32,10 @@
       <div id="topicDiv">
         <article id ='topicArt' class="topic">
           <h1>{{ page.title }}</h1>
-          
+          <!--
           <div style="font-size: 10px;">
             <p>site.github.baseurl is: {{ site.github.baseurl }}</p>
+            
             
             {% if site.github.pages_hostname == "github.io" %}
             <p>CSS LINK IS: {{ site.github.baseurl }}{{ '/css/FourD_CSS/vmtHelp.css' | absolute_url }}</p>
@@ -70,7 +58,7 @@
             
             <p>REPOS URL IS: {{ site.github.repository_url }}</p>
           </div>
-          
+          -->
           {{ content }}
           
         </article>
@@ -92,46 +80,22 @@
                   {% else %}
                   <h5><a href="{{ 'index.html' | absolute_url }}">DOCUMENTATION HOME</a></h5>
                   {% endif %}
-                  <!--
-                  <h5><a href="index.html">HOME PAGE</a></h5>
-                  -->
                   {% for item in site.data.nav.toc %}
-                  <h5>{{ item.title }}</h5>
-                  <ul>
+                    <h5>{{ item.title }}</h5>
+                    <ul>
                     {% for entry in item.subItems %}
-                    
-                    
-                    {% if site.github.pages_hostname == "github.io" %}
-                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ entry.page }}</a></li>
-                    {% else %}
-                    <li><a href="{{ entry.dir | absolute_url }}">{{ entry.page }}</a></li>
-                    {% endif %}
-                    
-                    
-                    <!--
-                    <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ site.github.baseurl }}{{ entry.url  | relative_url }} | relative</a></li>
-                    
-                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ site.github.baseurl }}{{ entry.dir  | relative_url }} | relative</a></li>
-                    -->
-                    <!--
-                    <li><a href="{{ site.github.baseurl }}{{ entry.url | relative_url }}">{{ site.github.baseurl }}{{ entry.url  | absolute_url }} | absolute</a></li>
-                    <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ site.github.baseurl }}{{ entry.dir  | absolute_url }} | absolute</a></li>
-                    <li><a href="{{ site.github.baseurl }}{{ entry.dir }}{{ entry.url | relative_url }}">{{ entry.dir }}{{ entry.url  | relative_url }} | relative</a></li>
-                    <li><a href="/{{ entry.url }}">{{ entry.dir }}{{ entry.url }}</a></li>
-                    -->
-                    
+                        {% if site.github.pages_hostname == "github.io" %}
+                        <li><a href="{{ site.github.baseurl }}{{ entry.dir | relative_url }}">{{ entry.page }}</a></li>
+                        {% else %}
+                        <li><a href="{{ entry.dir | absolute_url }}">{{ entry.page }}</a></li>
+                        {% endif %}
                     {% endfor %}
-                  </ul>
+                    </ul>
                   {% endfor %}
                 </ul>
               </div>
             </article>
           </div>
-          <!--
-          <div id="search">
-            <search-directive id="searchDiv" class="navContent" searchobj="searchobj"/>
-          </div>
-          -->
         </span>
       </div>
     </div>

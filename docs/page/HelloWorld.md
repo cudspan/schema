@@ -3,43 +3,20 @@ layout: default
 title: Hello World
 ---
 
-This tutorial walks your through a Hello World project. This is the 
+This tutorial walks you through a Hello World project. This is the 
 simplest project you can deploy to show end-to-end functioning of 
 the Data Ingestion Framework (DIF). 
 
-The DIF is the pairing of a specific data format with a 
+The DIF pairs a specific data format (a JSON schema) with a 
 {{ site.data.vars.Product_Short }} probe. You deploy a DIF data server 
-and configure it as a {{ site.data.vars.Product_Short }} via the DIF probe. 
-This probe gets the data your target delivers, and uses it to add entities or metric 
+and configure it as a {{ site.data.vars.Product_Short }} target. 
+The DIF probe gets the data your target delivers, and uses it to add entities or metric 
 values to the {{ site.data.vars.Product_Short }} supply chain. 
 
-This tutorial shows you how to put this all together, to prove 
-that you have a valid development environment. You will:
+This tutorial shows you how to put this all together. Successfully completing 
+it will prove that you have a valid environment to deploy and test 
+DIF data. In this tutorial you will:
 
-<!--
-<ul>
-<li><p>Deploy a server that can serve up a JSON string over HTTP or HTTPS</p>
-<p>This will be your your DIF data server.  It can reside on any network that 
-your {{ site.data.vars.Product_Short }} 
-instance can access. You can even deploy the server on your 
-{{ site.data.vars.Product_Short }} instance.</p>
-</li>
-<li><p>Create the data to add a single entity to the {{ site.data.vars.Product_Short }} 
-topology</p>
-<p>The data format is a JSON string that complies with the JSON Schema we have included 
-as part of the DIF. You will create the data to define a Buiness Application 
-entity that is named "Hello World".</p>
-</li>
-<li><p>Validate your data against the JSON schema</p>
-<p>As you develop the data you want to load into {{ site.data.vars.Product_Short }}, 
-you should use a JSON Schema validator to make sure your data complies with the schema.
-</li>
-<li><p>Configure your DIF data server as a target in {{ site.data.vars.Product_Short }}</p>
-<p>To configure the target, you simply specify the URL to your server that 
-will return the JSON string via a <code>GET</code> method. </p>
-</li>
-</ul>
--->
 * Deploy a server that can serve up a JSON string over HTTP or HTTPS
 * Create the data to add a single entity to the {{ site.data.vars.Product_Short }}  topology
 * Validate your data against the DIF JSON schema
@@ -59,7 +36,7 @@ You must be able to create a new directory on that server, and upload a
 JSON file to it.
 
 For this tutorial, we will assume your web server is on the domain, `MyDomain.com`, 
-we assume your {{ site.data.vars.Product_Short }} can reach it either directly or 
+and we assume your {{ site.data.vars.Product_Short }} instance can reach it either directly or 
 through a proxy.
 
 Go into the server and create the directory, `www/dif/`. Your server will serve up 
@@ -72,12 +49,14 @@ for the long term.
 > **NOTE:** If you don't have a web server handy, you can use the sample node.js 
 > that we include in the examples repository.  You can deploy that on any machine in 
 > your network that has node installed. You can even install node on your 
-> {{ site.data.vars.Product_Short }} machine, and deploy the server there.
+> {{ site.data.vars.Product_Short }} instance, and deploy the server there.
 
 # Step 2: Create the JSON Data
 
 For this tutorial you will create a topology with a single Business Application entity. 
-This entity will have the name "Hello World Tutorial".  In the `www/dif/` directory you 
+This entity will have the name "Hello World Tutorial". 
+
+In the `www/dif/` directory you 
 created, create a file named `HelloWorld.json`, and give it the following content. 
 
     {
@@ -94,15 +73,15 @@ created, create a file named `HelloWorld.json`, and give it the following conten
       ]
     }
 
-A brief description of the data is in order. The data object begins with 
+A brief description of this data is in order. The data object begins with 
 typical initial information such as version, time of latest update, and 
-other descriptors. For complete descriptions, see the the following 
+other descriptors. For a complete discussion of these fields, see the the 
 Schema Object description for [Topology Object](Topology.html). 
 
-For these initializing fields, the most important is `updateTime`. 
+Of these initial fields, `updateTime` is important to consider. 
 In a real-world use case, you would 
 periodically update your topology data to capture changes in your environment. 
-As you do, you should post the update time here. This could be useful for debugging 
+As you do that, you should post the update time here. This could be useful for debugging 
 in case your management process stops updating the data. For this tutorial, any 
 arbitrary integer will do.
 
@@ -111,15 +90,15 @@ fields:
 
 * `uniqueId`: 
     
-    This identifies the entity among all the instances of that 
-    entity type in your topology. Because the ID must be globally unique, you 
-    should use naming conventions that express your namespace for this topology 
+    This identifies the entity among all other instances of that 
+    type in your topology. Because the ID must be globally unique, you 
+    should use naming conventions that express a namespace for this topology 
     segment that you're creating.
     
 * `type`:
     
     The type of entity you are creating. For this tutorial we are creating a 
-    a Business Application. DIF currently supports:
+    Business Application. DIF currently supports the following entity types:
     - `businessApplication`
     - `businessTransaction`
     - `service`
@@ -128,12 +107,13 @@ fields:
 
 * `name`:
 
-    The display name for the entity. This does not have to be unique, but it is usually 
+    The display name for the entity. This is not required to be unique, but it is usually 
     convenient to give unique display names.
 
-An entity can include other properties, such as metrics to show utilization of capacity, 
-or relationships to other entities to stitch it into the 
-{{ site.data.vars.Product_Short }} supply chain.
+An entity can include other properties, such as metrics to show utilization of resources, 
+or relationships to other entities that stitch it into the 
+{{ site.data.vars.Product_Short }} topology. For this tutorial we will not explore any 
+of these properties.
 
 After you save the file, your DIF data server should be able to serve up the JSON data. 
 To test it, use the following command, assuming your own domain, and assuming you 
@@ -152,14 +132,14 @@ work. This can save you time, and can avoid problems where you don't get
 the results you expect.
 
 There are many validators implemented against JSON Schema draft 7. You can even 
-deploy them in your data process to make sure yoo always generate valid data. 
-For this tutorial we will use an online validator at:
+deploy them in your data process to make sure you always generate valid data. 
+For this tutorial we will use the online validator at:
 
 <a href="https://www.jsonschemavalidator.net/" target="blank">https://www.jsonschemavalidator.net/</a>
 
-Copy the DIF schema from **FICTION ALERT: NEED SCHEMA LOCATION** to the clipboard. 
-Then navigate to the validator and pase the schema in the left-hand panel. Then 
-copy the contents of your JSON file and paste it into the right-hand panel. 
+Copy the content of the DIF schema from **FICTION ALERT: NEED SCHEMA LOCATION**. 
+Then navigate to the validator and paste the schema in the left-hand panel. Then 
+copy the content of your JSON file and paste that into the right-hand panel. 
 You should see no errors.
 
 {% if site.github.pages_hostname == "github.io" %}
@@ -169,7 +149,8 @@ You should see no errors.
 {% endif %}
 
 
-**FICTION ALERT: THIS ASSUMES THE SCHEMA IS IN A SINGLE FILE. I SPOKE WITH PALLAVI ABOUT THAT.**
+**FICTION ALERT: THIS ASSUMES THE SCHEMA IS IN A SINGLE FILE. I SPOKE WITH PALLAVI 
+AND SHE AGREES WE CAN DO THAT.**
 
 # Step 4: Configure the DIF Data Server as a {{ site.data.vars.Product_Short }} Target
 
@@ -201,15 +182,17 @@ in the list. It should be green, which means it successfully validated.
 
 If the target did not validate, make sure that the URL you specified actually 
 returns the JSON data. Also, you should ensure that the data is valid 
-for the DIF JSON schema.
+for the DIF schema.
 
 {{ site.data.vars.Product_Short }} requests data from targets at 10-minute intervals. 
 Assuming your target validated, then within about 10 minutes you should see your 
-entity in the {{ site.data.vars.Product_Short }} supply chain. In 
-{{ site.data.vars.Product_Short }}, navigate to **SEARCH** and select 
-**Business Applications**. In the Search field, type `Hello` -- The 
+entity in the {{ site.data.vars.Product_Short }} supply chain. 
+
+In {{ site.data.vars.Product_Short }}, navigate to **SEARCH** and select 
+**Business Applications**. In the Search field, type `Hello`. The 
 Hello World Tutorial entity should appear in the list. Click on that entry, 
-and you should see the entity in the Supply Chain.
+and {{ site.data.vars.Product_Short }} should change scope to show the 
+entity in the Supply Chain.
 
 {% if site.github.pages_hostname == "github.io" %}
 <img src="{{ site.github.baseurl }}{{ '/assets/HelloWorld1_SupplyChain.gif' | relative_url }}" alt="The Supply Chain">
@@ -220,7 +203,7 @@ and you should see the entity in the Supply Chain.
 
 # Wrap Up
 
-This is the simplest possible use of the DIF to load an entity into the 
+This is the simplest possible use of the Data Ingestion Framework to load an entity into the 
 {{ site.data.vars.Product_Short }} via a custom target. If you got this far, 
 you know that you can produce DIF data and validate it. You know that you 
 can deploy a DIF data server, and use it to serve up the DIF data. And you 
