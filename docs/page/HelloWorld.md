@@ -162,7 +162,12 @@ Then navigate to the validator and pase the schema in the left-hand panel. Then
 copy the contents of your JSON file and paste it into the right-hand panel. 
 You should see no errors.
 
-![Validation](/assets/HelloWorld_Validate.gif)
+{% if site.github.pages_hostname == "github.io" %}
+<img src="{{ site.github.baseurl }}{{ '/assets/HelloWorld_Validate.gif' | relative_url }}" alt="Validation">
+{% else %}
+<img src="{{ '/assets/HelloWorld_Validate.gif' | relative_url }}" alt="Validation">
+{% endif %}
+
 
 **FICTION ALERT: THIS ASSUMES THE SCHEMA IS IN A SINGLE FILE. I SPOKE WITH PALLAVI ABOUT THAT.**
 
@@ -206,7 +211,12 @@ entity in the {{ site.data.vars.Product_Short }} supply chain. In
 Hello World Tutorial entity should appear in the list. Click on that entry, 
 and you should see the entity in the Supply Chain.
 
-![Validation](/assets/HelloWorld1_SupplyChain.gif)
+{% if site.github.pages_hostname == "github.io" %}
+<img src="{{ site.github.baseurl }}{{ '/assets/HelloWorld1_SupplyChain.gif' | relative_url }}" alt="The Supply Chain">
+{% else %}
+<img src="{{ '/assets/HelloWorld1_SupplyChain.gif' | relative_url }}" alt="The Supply Chain">
+{% endif %}
+
 
 # Wrap Up
 
