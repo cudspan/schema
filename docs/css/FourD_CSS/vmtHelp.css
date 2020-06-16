@@ -383,6 +383,19 @@ p.Code {
 table {
     margin-top: 10px;
     border-collapse: collapse;
+    border: 1px solid white;
+}
+
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+table.props > tbody > tr,
+table.props > tbody > tr > td,
+table.props > tbody > tr > thead
+{
+    border: 1px solid white;
 }
 
 table,
@@ -394,6 +407,7 @@ th {
     padding-top: 0px;
     padding-left: 10px;
 }
+
 
 th,
 thead,

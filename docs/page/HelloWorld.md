@@ -62,7 +62,7 @@ created, create a file named `HelloWorld.json`, and give it the following conten
     {
       "version": "v1",
       "updateTime": 123,
-      "scope": "",
+      "scope": "Tutorial",
       "source": "",
       "topology" : [
         {
@@ -203,7 +203,7 @@ entity in the Supply Chain.
 
 # Wrap Up
 
-This is the simplest possible use of the Data Ingestion Framework to load an entity into the 
+This is the simplest possible use of the Data Ingestion Framework to load an entity into 
 {{ site.data.vars.Product_Short }} via a custom target. If you got this far, 
 you know that you can produce DIF data and validate it. You know that you 
 can deploy a DIF data server, and use it to serve up the DIF data. And you 

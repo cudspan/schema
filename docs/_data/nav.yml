@@ -13,6 +13,9 @@ toc:
     - page: Entity Object
       url: Entity.html
       dir: /page/Entity.html
+    - page: Metrics Entry Object
+      url: metricsEntry.html
+      dir: /page/metricsEntry.html
 
   - title: Tutorials
     subItems:

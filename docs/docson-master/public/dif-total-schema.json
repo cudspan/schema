@@ -13,6 +13,10 @@
       "description": "Epoch timestamp for when files are generated",
       "type": "integer"
     },
+    "scope": {
+      "description": "An identifier for the topology this DIF target is generating. Enables the DIF probe to manage multiple DIF targets on the same environment.",
+      "type": "string"
+    },
     "topology": {
       "description": "An array of ENTITY objects.",
       "type" : "array",
@@ -25,6 +29,7 @@
   "required": [
     "version",
     "updateTime",
+    "scope",
     "topology"
   ],
 
